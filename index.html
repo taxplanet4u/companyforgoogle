@@ -20,20 +20,13 @@
     </script>
 
     <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', {
-            // [수정] 요청하신 구글 애즈 CCTV 전환 추적 ID 반영
-            'send_to': 'AW-650402254/8TEUCInDn-AbEM6zkbYC',
-            'event_callback': callback
-        });
-        return false;
-      }
-    </script>
+  window.addEventListener('load', function(){
+    var inqForm = document.querySelector('form[action*="formspree.io/f/mreezagl"]');
+    inqForm.addEventListener('submit', function(){
+      gtag('event', 'conversion', {'send_to': 'AW-650402254/KU8LCPXt5-AbEM6zkbYC'});
+    });
+  });
+</script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
